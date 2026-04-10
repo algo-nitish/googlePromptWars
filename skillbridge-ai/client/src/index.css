@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-background: #0a0a0f;
+  --color-surface: #111118;
+  --color-border-subtle: #1e1e2e;
+  --color-accent1: #7c3aed;
+  --color-accent2: #06b6d4;
+  --color-accent3: #f59e0b;
+  --color-glow: rgba(124, 58, 237, 0.15);
+  --color-text-primary: #f1f5f9;
+  --color-text-muted: #64748b;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text-primary font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 25px var(--color-glow);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--color-accent1), var(--color-accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
+  }
+}
