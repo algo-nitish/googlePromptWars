@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../utils/api';
+import { AuthContext } from '../context/AuthContext';
 import { ArrowLeft, Sparkles, X, Plus } from 'lucide-react';
 import toast from 'react-hot-toast';
 

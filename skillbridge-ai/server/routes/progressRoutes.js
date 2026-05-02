@@ -4,7 +4,7 @@ import { protect } from '../middleware/auth.js';
 
 const router = express.Router();
 
-router.route('/:sessionId').get(protect, getProgress);
 router.route('/log').post(protect, logProgress);
+router.route('/:sessionId').get(protect, getProgress);
 
 export default router;

@@ -1,0 +1,13 @@
+{
+  "name": "skillbridge-ai",
+  "version": "1.0.0",
+  "description": "AI-powered skill gap analyzer and learning roadmap generator",
+  "scripts": {
+    "install:all": "cd server && npm install && cd ../client && npm install",
+    "build:client": "cd client && npm run build",
+    "start": "cd server && node index.js",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "render:build": "npm run install:all && npm run build:client"
+  }
+}
